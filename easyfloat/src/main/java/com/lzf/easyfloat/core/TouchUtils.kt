@@ -211,7 +211,7 @@ internal class TouchUtils(val context: Context, val config: FloatConfig) {
         emptyHeight = parentHeight - view.height - statusBarHeight
 
         leftBorder = max(0, config.leftBorder)
-        rightBorder = min(parentWidth, config.rightBorder) - view.width
+        rightBorder = config.rightBorder- view.width
         topBorder = if (config.showPattern == ShowPattern.CURRENT_ACTIVITY) {
             // 单页面浮窗，坐标屏幕顶部计算
             if (config.immersionStatusBar) config.topBorder
